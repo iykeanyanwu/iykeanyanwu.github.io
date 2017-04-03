@@ -120,7 +120,12 @@ function utils() {
         var parts = full_url.split("#");
         var trgt = parts[1];
 
-        $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+        if (trgt !== undefined) {
+            $('body').scrollTo($('#' + trgt), 800, {offset: -40});
+        } else {
+            // Open blog in new tab instead of scroll
+            window.open(full_url);
+        }
 
     });
 
