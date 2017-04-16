@@ -1,15 +1,12 @@
 $(function () {
-    console.log("portfolio works")
-    var folder = "./portfolio/";
     var images_list = [];
 
     $.ajax({
-        url: folder,
+        url: './images.json',
+        dataType: 'json',
         success: function(data) {
-            $(data).find("a").attr("href", function (i, val) {
-                if( val.match(/\.(jpe?g|png)$/) ) {
-                    images_list.push(val)
-                }
+            $.each( data, function( key, val ) {
+                images_list.push(val)
             });
         }
     });
