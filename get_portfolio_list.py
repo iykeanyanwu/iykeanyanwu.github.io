@@ -1,3 +1,11 @@
+"""
+This gets the names of the images from the portfolio directory
+and dumps them in images.json file.
+
+Run this file whenever an image is added to the portfolio directory to
+update images.json
+"""
+
 import os
 import json
 
