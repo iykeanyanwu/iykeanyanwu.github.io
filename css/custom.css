@@ -1,1 +1,10 @@
 /* your styles go here */
+#contact {
+    padding: 0 0 150px 0;
+}
+
+@media (max-width: 991px) {
+  #contact {
+    padding: 0 0 60px 0;
+  }
+}
