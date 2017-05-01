@@ -37,7 +37,7 @@ function lightbox() {
 }
 
 /* =========================================
- *  sticky header 
+ *  sticky header
  *  =======================================*/
 
 function sticky() {
@@ -123,7 +123,7 @@ function utils() {
         if (trgt !== undefined) {
             $('body').scrollTo($('#' + trgt), 800, {offset: -40});
         } else {
-            // Open blog in new tab instead of scroll
+            // Open in new tab instead of scroll
             window.open(full_url);
         }
 
