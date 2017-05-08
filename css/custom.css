@@ -8,3 +8,8 @@
     padding: 0 0 60px 0;
   }
 }
+
+.portfolio-images img {
+    height: 202.5px;
+    width: 360px;
+}
