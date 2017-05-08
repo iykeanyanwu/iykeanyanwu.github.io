@@ -9,6 +9,8 @@ $(function() {
             midRange: 5,
             endRange: 1
         });
+
+        $("img.lazy").lazyload();
     }
 
     // This gets the images from images.json file and automatically
@@ -22,10 +24,10 @@ $(function() {
                 for (var i = 0; i < img_list_length; i++) {
                     img = img_list[i]
                     console.log(img)
-                    $(".portfolio-images").append('<div class="col-sm-4"><div class="box"><a href="' + img + '" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="" data-footer="Some footer information"><img src="' + img + '" alt="" class="img-responsive"></a></div>')
+                    $(".portfolio-images").append('<div class="col-sm-4"><div class="box"><a href="' + img + '" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="" data-footer="Some footer information"><img class="lazy" data-original="' + img + '" alt="" class="img-responsive"></a></div>')
                 }
             });
         },
-        complete: paginate,
+        complete: paginate
     });
 });
