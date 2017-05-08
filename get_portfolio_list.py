@@ -14,12 +14,12 @@ folder = "portfolio"
 output = {"images": []}
 
 for f in os.listdir(folder):
-    output["images"].append(os.path.join(folder, f))
+    output["images"].append([f.split(".")[-2], os.path.join(folder, f)])
 
 # Sort the list of images
 # so that the ones with highest ID numbers will be at the top
 output["images"].sort(
-    key=lambda x: x.split(".")[-2].split("(ID-ICA")[-1].strip(")"),
+    key=lambda x: x[1].split("(ID-ICA")[-1].strip(")"),
     reverse=True
 )
 
